@@ -108,8 +108,8 @@ public class BVManagedUIContentTest {
 	public void testIncludeIntegrationScript() {
 		BVConfiguration bvConfiguration = new BVSdkConfiguration();
 		bvConfiguration.addProperty(BVClientConfig.BOT_DETECTION, "True");
-		bvConfiguration.addProperty(BVClientConfig.CLOUD_KEY, "");
-		bvConfiguration.addProperty(BVClientConfig.BV_ROOT_FOLDER, "");
+		bvConfiguration.addProperty(BVClientConfig.CLOUD_KEY, "12325");
+		bvConfiguration.addProperty(BVClientConfig.BV_ROOT_FOLDER, "afgedbd");
 		bvConfiguration.addProperty(BVClientConfig.LOAD_SEO_FILES_LOCALLY, "True");
 		bvConfiguration.addProperty(BVClientConfig.LOCAL_SEO_FILE_ROOT, "/seo_local_files");
 		bvConfiguration.addProperty(BVClientConfig.STAGING, "True");
