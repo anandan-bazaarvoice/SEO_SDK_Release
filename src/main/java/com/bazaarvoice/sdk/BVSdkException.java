@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.bazaarvoice.util.BVSdkMessageUtil;
 
 /**
- * Bazaarvoice sdk exception class.
+ * Bazaarvoice sdk exception class..
  * 
  * @author Anandan Narayanaswamy
  *
