@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.bazaarvoice</groupId>
+	<artifactId>seo-sdk</artifactId>
+	<version>2.0</version>
+	<name>seo-sdk</name>
+	<description>seo-sdk project</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8.5</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+	            
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+  			<artifactId>commons-lang3</artifactId>
+  			<version>3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>fluent-hc</artifactId>
+            <version>4.2.3</version>
+        </dependency>
+	</dependencies>
+	
+	<scm>
+		<url>https://github.com/anandan-bazaarvoice/SEO_SDK_Release</url>
+		<connection>scm:git:https://github.com/anandan-bazaarvoice/SEO_SDK_Release.git</connection>
+		<!-- <connection>scm:git:git://github.com/anandan-bazaarvoice/SEO_SDK_Release.git</connection> -->
+		<developerConnection>scm:git:https://github.com/anandan-bazaarvoice/SEO_SDK_Release.git</developerConnection>
+	  <tag>seo-sdk-2.0</tag>
+  </scm>
+	
+	<build>
+		<plugins>
+		
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.4.1</version>
+      </plugin>
+    
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-scm-plugin</artifactId>
+			<version>1.8.1</version>
+			<configuration>
+				<connectionType>connection</connectionType>
+				<basedir>E:\release_repo\SEO_SDK_Release</basedir>
+				<includes>E:\release_repo\SEO_SDK_Release\*</includes>
+				<message>Committing intial release</message>
+				<username>anandan-bazaarvoice</username>
+				<password>a7n277vm</password>
+				<pushChanges>true</pushChanges>
+			</configuration>
+		</plugin>
+		
+			<plugin>
+	        	<artifactId>maven-compiler-plugin</artifactId>
+	        	<version>3.1</version>
+	        	<configuration>
+	        		<source>1.5</source>
+	        		<target>1.5</target>
+	        	</configuration>
+	      	</plugin>
+      
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-full-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
